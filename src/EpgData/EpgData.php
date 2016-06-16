@@ -31,7 +31,7 @@ class EpgData
     {
         $this->baseUrl = $baseUrl;
         $this->pin = $pin;
-        $this->tempdir = $tempDir ?: get_cfg_var('upload_tmp_dir');
+        $this->tempDir = $tempDir ?: get_cfg_var('upload_tmp_dir');
     }
 
     public function getIncludesPackage()
