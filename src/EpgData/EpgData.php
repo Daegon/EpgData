@@ -79,7 +79,7 @@ class EpgData
     private function getParams($action, array $additional = array())
     {
         if ('file' !== parse_url($this->baseUrl, PHP_URL_SCHEME)) {
-            $params = array_merge($this->defaultParams, array('action' => $action, 'pin' => $this->pin), $additional);
+            $params = array_merge(array('action' => $action, 'pin' => $this->pin), $this->defaultParams, $additional);
             return '?'.http_build_query($params);
         }
 
